@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "tailwindcss";
+
+
+
+
+:root{--brand-primary:#ff6fa9;--brand-compl:#ffeaf5}
+
+body {
+	background-color: #000;
+	color: #fff;
+	font-family: 'Poppins', sans-serif;
+}
+
+
+/* small custom utilities */
+.card-shadow{
+	box-shadow:0 10px 30px rgba(16,24,40,0.08);
+	background: #fff !important;
+	color: #000 !important;
+}
+.hero-overlay{background:linear-gradient(90deg, rgba(255,111,153,0.1), rgba(255,111,153,0.06))}
+
+
+/* Card hover effect fallback for non-js users */
+.card-hover:hover{transform:translateY(-6px) scale(1.01)}
+
+
+/* Smooth image fit */
+.img-fit{object-fit:cover}
