@@ -82,10 +82,19 @@ return (
 		</div>
 
 			{/* Show 6 unique dishes at the top, no duplicates */}
-			<div className='mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6'>
-				{uniqueMenuDishes.slice(0, 6).map(d => (
-					<DishCard key={d.title} dish={d} onAdd={add} />
-				))}
+			{/* 2 rows, 3 columns: card1 card2 card3 (row 1), card4 card5 card6 (row 2) */}
+			{/* 2 rows, 3 columns, with extra space between rows */}
+			<div className='mt-8 force-menu-grid'>
+				<div className='force-menu-row'>
+					{uniqueMenuDishes.slice(0, 3).map(d => (
+						<DishCard key={d.title} dish={d} onAdd={add} />
+					))}
+				</div>
+				<div className='force-menu-row'>
+					{uniqueMenuDishes.slice(3, 6).map(d => (
+						<DishCard key={d.title} dish={d} onAdd={add} />
+					))}
+				</div>
 			</div>
 
 			{/* Only show 6 unique featured dishes */}

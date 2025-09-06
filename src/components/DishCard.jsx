@@ -12,8 +12,8 @@ return (
 	transition={{duration:0.35}}
 				className='bg-white rounded-xl overflow-hidden card-shadow card-hover text-black flex flex-col h-full text-center font-[Poppins],cursive items-center justify-center' style={{width:'100%',height:'100%'}} 
 >
-			<div className='h-44 w-full overflow-hidden flex-shrink-0 flex items-center justify-center'>
-				<img src={dish.img} alt={dish.title} className='w-full h-full object-cover' />
+			<div className='force-menu-img-container w-full overflow-hidden flex-shrink-0 flex items-center justify-center'>
+				<img src={dish.img} alt={dish.title} className='w-full object-cover force-menu-img-force' />
 			</div>
 		<div className='p-4 flex flex-col flex-1 items-center'>
 			<h3 className='font-semibold text-black text-center font-[Poppins],cursive'>{dish.title}</h3>

@@ -1,3 +1,65 @@
+/* Forcefully decrease height of featured cards from bottom on home page */
+.force-feature-card {
+	max-height: 410px !important;
+	min-height: 350px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	padding-bottom: 0 !important;
+	margin-bottom: 0 !important;
+	overflow: hidden;
+}
+/* Forceful menu card image container and image sizing */
+.force-menu-img-container {
+	height: 180px !important;
+	min-height: 160px;
+	max-height: 200px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: #fff;
+}
+.force-menu-img-force {
+	max-height: 180px !important;
+	min-height: 120px;
+	width: 100% !important;
+	object-fit: cover !important;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+/* Forceful menu grid: 3 cards per row, 2 rows, strong spacing */
+.force-menu-grid {
+	display: flex;
+	flex-direction: column;
+	gap: 48px;
+	align-items: center;
+}
+.force-menu-row {
+	display: flex;
+	flex-direction: row;
+	gap: 40px;
+	justify-content: center;
+	width: 100%;
+	max-width: 1200px;
+}
+@media (max-width: 1023px) {
+	.force-menu-row {
+		flex-direction: column;
+		gap: 32px;
+		align-items: center;
+	}
+}
+/* Forceful menu card image sizing */
+.force-menu-img {
+	max-height: 96px !important;
+	min-height: 64px;
+	width: 100% !important;
+	object-fit: cover !important;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
 /* Forceful chef image sizing for About cards */
 .force-about-chef-img {
 	width: 72px !important;
