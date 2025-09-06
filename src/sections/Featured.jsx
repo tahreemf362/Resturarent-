@@ -25,7 +25,7 @@ return (
 </div>
 
 
-<div className='mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6'>
+<div className="mt-6 flex flex-row flex-wrap md:flex-nowrap gap-8 mx-auto items-stretch justify-center">
 	{top.map(d => {
 		let textColor = undefined;
 		if (
@@ -35,7 +35,11 @@ return (
 		) {
 			textColor = '#ff6f00';
 		}
-		return <DishCard key={d.id} dish={{ ...d, textColor }} onAdd={add} />;
+		return (
+			<div className="force-feature-card">
+				<DishCard key={d.id} dish={{ ...d, textColor }} onAdd={add} />
+			</div>
+		);
 	})}
 </div>
 </section>

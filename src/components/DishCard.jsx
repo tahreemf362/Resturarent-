@@ -5,32 +5,26 @@ import { motion } from 'framer-motion'
 export default function DishCard({dish, onAdd}){
 return (
 <motion.article
-initial={{opacity:0, y:12}}
-whileInView={{opacity:1, y:0}}
-viewport={{once:true}}
-whileHover={{ scale: 1.02 }}
-transition={{duration:0.35}}
-className='bg-white rounded-xl overflow-hidden card-shadow card-hover text-black'
+	initial={{opacity:0, y:12}}
+	whileInView={{opacity:1, y:0}}
+	viewport={{once:true}}
+	whileHover={{ scale: 1.02 }}
+	transition={{duration:0.35}}
+				className='bg-white rounded-xl overflow-hidden card-shadow card-hover text-black flex flex-col h-full text-center font-[Poppins],cursive items-center justify-center' style={{width:'100%',height:'100%'}} 
 >
-<div className='h-44 overflow-hidden'>
-<img src={dish.img} alt={dish.title} className='w-full h-full img-fit' />
-</div>
-<div className='p-4'>
-<div className='flex justify-between items-start gap-2'>
-<div>
-<h3 className='font-semibold text-black'>{dish.title}</h3>
-<p className='text-sm mt-1 line-clamp-2 text-black'>{dish.desc}</p>
-</div>
-<div className='text-right'>
-<div className='text-lg font-bold text-black'>${dish.price.toFixed(2)}</div>
-<div className='text-sm text-black'>⭐ {dish.rating}</div>
-</div>
-</div>
-<div className='mt-4 flex justify-between items-center'>
-<button onClick={()=>onAdd(dish)} className='bg-brand-500 text-white px-3 py-2 rounded-md text-sm font-semibold hover:opacity-95 transition'>Add</button>
-<button className='text-sm text-slate-600 hover:text-slate-800'>Details</button>
-</div>
-</div>
+			<div className='h-44 w-full overflow-hidden flex-shrink-0 flex items-center justify-center'>
+				<img src={dish.img} alt={dish.title} className='w-full h-full object-cover' />
+			</div>
+		<div className='p-4 flex flex-col flex-1 items-center'>
+			<h3 className='font-semibold text-black text-center font-[Poppins],cursive'>{dish.title}</h3>
+			<p className='text-sm mt-1 line-clamp-2 text-black text-center font-[Poppins],cursive'>{dish.desc}</p>
+			<div className='text-lg font-bold text-black mt-2 text-center font-[Poppins],cursive'>${dish.price.toFixed(2)}</div>
+			<div className='text-sm text-black mb-2 text-center font-[Poppins],cursive'>⭐ {dish.rating}</div>
+			<div className='dish-btn-row'>
+				<button onClick={()=>onAdd(dish)} className='dish-btn-orange px-6 py-3 rounded-lg text-lg font-bold hover:opacity-90 transition font-[Poppins],cursive'>Add</button>
+				<button className='dish-btn-orange px-6 py-3 rounded-lg text-lg font-bold hover:opacity-90 transition font-[Poppins],cursive'>Details</button>
+			</div>
+		</div>
 </motion.article>
 )
 }

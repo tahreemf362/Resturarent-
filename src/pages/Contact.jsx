@@ -13,9 +13,9 @@ setForm({name:'',email:'',message:''})
 return (
 <div className='container mx-auto px-4 py-12'>
 <h1 className='text-3xl font-bold'>Contact</h1>
-<div className='mt-6 grid grid-cols-1 md:grid-cols-2 gap-8'>
+<div className='mt-6 grid grid-cols-1 md:grid-cols-2 gap-8 md:justify-end items-start'>
 
-<form onSubmit={submit} className='bg-white p-6 rounded-xl card-shadow'>
+<form onSubmit={submit} className='bg-white p-6 rounded-xl card-shadow force-contact-left force-contact-card-wide force-contact-form-tall'>
 	<label className='block text-sm font-medium' style={{ color: '#ff6f00' }}>Name</label>
 	<input required value={form.name} onChange={e=>setForm({...form,name:e.target.value})} className='mt-1 border rounded-md w-full px-3 py-2' style={{ color: '#ff6f00', borderColor: '#ff6f00' }} />
 
@@ -31,8 +31,8 @@ return (
 </form>
 
 
-<aside className='space-y-4'>
-<div className='bg-white p-6 rounded-xl card-shadow'>
+<aside className='space-y-4 flex flex-col md:items-end items-center'>
+<div className='bg-white p-6 rounded-xl card-shadow force-contact-left force-contact-card-wide force-contact-info-tall'>
 <h3 className='font-semibold' style={{ color: '#ff6f00' }}>Visit Us</h3>
 <p className='mt-2' style={{ color: '#ff6f00' }}>123 Main St, City</p>
 <p className='mt-2' style={{ color: '#ff6f00' }}>(555) 555-5555</p>
@@ -40,7 +40,7 @@ return (
 </div>
 
 
-<div className='bg-white p-6 rounded-xl card-shadow'>
+<div className='bg-white p-6 rounded-xl card-shadow force-contact-left force-contact-card-wide force-contact-info-tall'>
 <h3 className='font-semibold' style={{ color: '#ff6f00' }}>Opening Hours</h3>
 <p className='mt-2' style={{ color: '#ff6f00' }}>Mon - Sun: 11:00 AM - 10:00 PM</p>
 </div>

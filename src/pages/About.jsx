@@ -10,27 +10,23 @@ return (
 
 
 <section className='mt-10'>
-<h2 className='text-2xl font-semibold'>Our Team</h2>
-<div className='mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6'>
-<div className='bg-white rounded-xl p-6 card-shadow'>
-<img src={annaImg} alt='chef' className='w-full h-44 object-cover rounded-md' />
-<h3 className='mt-4 font-bold'>Chef Anna</h3>
-<p className='text-slate-600'>Head Chef & Founder</p>
-</div>
-
-
-<div className='bg-white rounded-xl p-6 card-shadow'>
-<img src='https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=12' alt='manager' className='w-full h-44 object-cover rounded-md' />
-<h3 className='mt-4 font-bold'>Manager</h3>
-<p className='text-slate-600'>Front of house</p>
-</div>
-
-
-<div className='bg-white rounded-xl p-6 card-shadow'>
-<img src='https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=13' alt='sommelier' className='w-full h-44 object-cover rounded-md' />
-<h3 className='mt-4 font-bold'>Sommelier</h3>
-<p className='text-slate-600'>Wine curator</p>
-</div>
+	<h2 className='text-2xl font-semibold'>Our Team</h2>
+		<div className='mt-6 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto force-about-chef-grid'>
+		<div className='bg-white rounded-xl p-8 card-shadow flex flex-col items-center force-about-chef-card'>
+			<img src={annaImg} alt='chef' className='force-about-chef-img object-cover rounded-full mb-4' />
+			<h3 className='font-bold text-lg'>Chef Anna</h3>
+			<p className='text-slate-600'>Head Chef & Founder</p>
+		</div>
+		<div className='bg-white rounded-xl p-8 card-shadow flex flex-col items-center force-about-chef-card'>
+			<img src='https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=12' alt='manager' className='force-about-chef-img object-cover rounded-full mb-4' />
+			<h3 className='font-bold text-lg'>Manager</h3>
+			<p className='text-slate-600'>Front of house</p>
+		</div>
+		<div className='bg-white rounded-xl p-8 card-shadow flex flex-col items-center force-about-chef-card'>
+			<img src='https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=13' alt='sommelier' className='force-about-chef-img object-cover rounded-full mb-4' />
+			<h3 className='font-bold text-lg'>Sommelier</h3>
+			<p className='text-slate-600'>Wine curator</p>
+		</div>
 </div>
 </section>
 </div>

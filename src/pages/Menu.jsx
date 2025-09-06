@@ -62,8 +62,8 @@ return (
 	<div className='container mx-auto px-4 py-12'>
 		<div className='flex flex-col md:flex-row md:items-center md:justify-between gap-4'>
 			<h1 className='text-3xl font-bold'>Our Menu</h1>
-			<div className='flex gap-3 items-center'>
-				<select value={category} onChange={e=>setCategory(e.target.value)} className='border rounded-md px-3 py-2' style={{ color: 'black', background: 'white' }}>
+			   <div className='flex items-center force-menu-controls'>
+				   <select value={category} onChange={e=>setCategory(e.target.value)} className='border rounded-lg px-6 py-5 text-lg font-bold' style={{ color: 'black', background: 'white', minWidth: '140px', minHeight: '56px' }}>
 					<option>All</option>
 					<option>Pizza</option>
 					<option>Pasta</option>
@@ -71,13 +71,13 @@ return (
 					<option>Dessert</option>
 					<option>Mains</option>
 				</select>
-				<input value={q} onChange={e=>setQ(e.target.value)} placeholder='Search dish' className='border rounded-md px-3 py-2' />
-				<select value={sort} onChange={e=>setSort(e.target.value)} className='border rounded-md px-3 py-2' style={{ color: 'black', background: 'white' }}>
+				   <input value={q} onChange={e=>setQ(e.target.value)} placeholder='Search dish' className='border rounded-lg px-6 py-5 text-lg font-bold' style={{minWidth:'140px', minHeight: '56px'}} />
+				   <select value={sort} onChange={e=>setSort(e.target.value)} className='border rounded-lg px-6 py-5 text-lg font-bold' style={{ color: 'black', background: 'white', minWidth: '140px', minHeight: '56px' }}>
 					<option value=''>Sort</option>
 					<option value='price-asc'>Price: Low → High</option>
 					<option value='price-desc'>Price: High → Low</option>
 				</select>
-				<button onClick={apply} style={{ backgroundColor: '#ff6f00', color: 'white' }} className='px-4 py-2 rounded-md font-semibold'>Apply</button>
+				   <button onClick={apply} style={{ backgroundColor: '#ff6f00', color: 'white', minWidth: '140px', minHeight: '56px' }} className='px-6 py-5 rounded-lg text-lg font-bold'>Apply</button>
 			</div>
 		</div>
 
