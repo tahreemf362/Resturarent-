@@ -4,22 +4,7 @@ import { motion } from 'framer-motion'
 export default function DishCard({ dish, onAdd }) {
   const cardRef = useRef(null)
 
-  useEffect(() => {
-    if (
-      typeof window !== 'undefined' &&
-      window.innerWidth <= 767 &&
-      document.body.classList.contains('menu-page')
-    ) {
-      if (cardRef.current) {
-        // Apply mobile styles
-        cardRef.current.style.backgroundColor = '#fff'
-        cardRef.current.style.color = '#000'
-        cardRef.current.querySelectorAll('*').forEach(el => {
-          el.style.color = '#000'
-        })
-      }
-    }
-  }, [])
+  // Removed useEffect that forcefully set text color to black on mobile. Now CSS will control the color.
 
   return (
     <motion.article

@@ -26,7 +26,7 @@ export default function Reserve() {
   return (
     <div className="container mx-auto px-4 py-12">
       <h1 className="text-3xl font-bold mb-6">Reserve a Table</h1>
-  <form onSubmit={handleSubmit} className="bg-white p-6 rounded-xl card-shadow max-w-xl w-full mx-auto">
+  <form onSubmit={handleSubmit} className="bg-white p-6 rounded-xl card-shadow max-w-xl w-full mx-auto animate-reserve-slide">
         <label className="block text-sm font-medium mb-1">Name</label>
   <input name="name" value={form.name} onChange={handleChange} required className="mb-4 border rounded-md px-3 py-3 text-lg" style={{ width: '200px', fontSize: '1.15rem' }} />
 

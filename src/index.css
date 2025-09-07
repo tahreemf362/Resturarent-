@@ -1,22 +1,20 @@
+/* --- Menu dish cards: mobile = black bg, white text; desktop = default --- */
 @media (max-width: 767px) {
-	.menu-page .force-dishcard-mobile,
+	.menu-page .force-dishcard-mobile {
+		background: #fff !important;
+		color: #000 !important;
+	}
 	.menu-page .force-dishcard-mobile *,
 	.menu-page .force-dishcard-mobile *:not([style*="color"]),
 	.menu-page .force-dishcard-mobile *:not([class*="text-"]) {
-		color: #FFD600 !important;
+		color: #000 !important;
+		background: #fff !important;
 	}
 }
 @media (min-width: 768px) {
 	.menu-page .force-dishcard-mobile, .menu-page .force-dishcard-mobile * {
 		color: #000 !important;
-	}
-}
-.menu-page .force-dishcard-mobile {
-	background: #fff !important;
-}
-@media (max-width: 1023px) {
-	.force-dishcard-mobile, .force-dishcard-mobile * {
-		color: #000 !important;
+		background: #fff !important;
 	}
 }
 /* Force black background for info cards on homepage */
@@ -79,6 +77,12 @@
 	margin-left: auto !important;
 	margin-right: auto !important;
 	overflow: hidden !important;
+	color: #000 !important;
+}
+.force-feature-card *,
+.force-feature-card *:not([style*="color"]),
+.force-feature-card *:not([class*="text-"]) {
+	color: #000 !important;
 }
 
 /* Forceful menu card image container and image sizing */
