@@ -25,7 +25,7 @@ return (
 </div>
 
 
-<div className="mt-6 flex flex-row flex-wrap md:flex-nowrap gap-8 mx-auto items-stretch justify-center">
+<div className="force-menu-row force-feature-row-mobile">
 	{top.map(d => {
 		let textColor = undefined;
 		if (
@@ -33,11 +33,12 @@ return (
 			d.title === 'Margherita Pizza' ||
 			d.title === 'Pasta Primavera'
 		) {
-			textColor = '#ff6f00';
+			textColor = '#FFD600';
 		}
 		return (
 			<div className="force-feature-card">
 				<DishCard key={d.id} dish={{ ...d, textColor }} onAdd={add} />
+				<div className="feature-recipe-mobile">{window.innerWidth <= 767 ? 'Try this recipe: Fresh, chef-selected ingredients for a perfect meal!' : ''}</div>
 			</div>
 		);
 	})}

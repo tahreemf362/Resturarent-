@@ -28,8 +28,12 @@ case 'ADD_TO_CART':{
 const item = action.payload
 return {...state, cart: [...state.cart, item]}
 }
+case 'REMOVE_FROM_CART': {
+	const idx = action.payload;
+	return { ...state, cart: state.cart.filter((_, i) => i !== idx) };
+}
 case 'CLEAR_CART':
-return {...state, cart: []}
+	return {...state, cart: []}
 default:
 return state
 }

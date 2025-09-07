@@ -35,12 +35,12 @@ function add(d){ dispatch({type:'ADD_TO_CART', payload:d}) }
 
 // Build the menu dishes array and filter/sort based on controls
 const allMenuDishes = [
-	{ title: 'Burger Special', desc: 'Juicy grilled burger with cheese, lettuce, and tomato.', price: 10.99, rating: 4.7, img: burger1, textColor: '#ff6f00' },
-	{ title: 'Margherita Pizza', desc: 'Classic pizza with tomato sauce, mozzarella, and basil.', price: 12.99, rating: 4.8, img: pizza, textColor: '#ff6f00' },
-	{ title: 'Pasta Primavera', desc: 'Fresh pasta with seasonal vegetables and a light sauce.', price: 13.99, rating: 4.6, img: pasta, textColor: '#ff6f00' },
-	{ title: 'Veggie Roll', desc: 'Soft roll stuffed with fresh veggies and sauces.', price: 8.99, rating: 4.5, img: roll, textColor: '#ff6f00' },
-	{ title: 'Pancake Stack', desc: 'Fluffy pancakes served with syrup and berries.', price: 9.99, rating: 4.4, img: pancake, textColor: '#ff6f00' },
-	{ title: 'Crispy Fries', desc: 'Golden, crispy fries with a side of ketchup.', price: 6.99, rating: 4.3, img: fries, textColor: '#ff6f00' },
+	{ title: 'Burger Special', desc: 'Juicy grilled burger with cheese, lettuce, and tomato.', price: 500, rating: 4.7, img: burger1, textColor: '#FFD600' },
+	{ title: 'Margherita Pizza', desc: 'Classic pizza with tomato sauce, mozzarella, and basil.', price: 2000, rating: 4.8, img: pizza, textColor: '#FFD600' },
+	{ title: 'Pasta Primavera', desc: 'Fresh pasta with seasonal vegetables and a light sauce.', price: 700, rating: 4.6, img: pasta, textColor: '#FFD600' },
+	{ title: 'Veggie Roll', desc: 'Soft roll stuffed with fresh veggies and sauces.', price: 400, rating: 4.5, img: roll, textColor: '#FFD600' },
+	{ title: 'Pancake Stack', desc: 'Fluffy pancakes served with syrup and berries.', price: 500, rating: 4.4, img: pancake, textColor: '#FFD600' },
+	{ title: 'Crispy Fries', desc: 'Golden, crispy fries with a side of ketchup.', price: 400, rating: 4.3, img: fries, textColor: '#FFD600' },
 ];
 let filteredMenu = allMenuDishes.filter(d =>
 	(!category || category === 'All' || d.title.toLowerCase().includes(category.toLowerCase()) || (d.category && d.category === category)) &&
@@ -62,8 +62,8 @@ return (
 	<div className='container mx-auto px-4 py-12'>
 		<div className='flex flex-col md:flex-row md:items-center md:justify-between gap-4'>
 			<h1 className='text-3xl font-bold'>Our Menu</h1>
-			   <div className='flex items-center force-menu-controls'>
-				   <select value={category} onChange={e=>setCategory(e.target.value)} className='border rounded-lg px-6 py-5 text-lg font-bold' style={{ color: 'black', background: 'white', minWidth: '140px', minHeight: '56px' }}>
+			   <div className='flex flex-col md:flex-row items-center force-menu-controls w-full gap-2 md:gap-4'>
+				   <select value={category} onChange={e=>setCategory(e.target.value)} className='border rounded-lg px-4 py-3 text-base font-bold w-full md:w-auto' style={{ color: 'black', background: 'white', minWidth: '100px', minHeight: '44px' }}>
 					<option>All</option>
 					<option>Pizza</option>
 					<option>Pasta</option>
@@ -71,13 +71,13 @@ return (
 					<option>Dessert</option>
 					<option>Mains</option>
 				</select>
-				   <input value={q} onChange={e=>setQ(e.target.value)} placeholder='Search dish' className='border rounded-lg px-6 py-5 text-lg font-bold' style={{minWidth:'140px', minHeight: '56px'}} />
-				   <select value={sort} onChange={e=>setSort(e.target.value)} className='border rounded-lg px-6 py-5 text-lg font-bold' style={{ color: 'black', background: 'white', minWidth: '140px', minHeight: '56px' }}>
+				   <input value={q} onChange={e=>setQ(e.target.value)} placeholder='Search dish' className='border rounded-lg px-4 py-3 text-base font-bold w-full md:w-auto' style={{minWidth:'100px', minHeight: '44px'}} />
+				   <select value={sort} onChange={e=>setSort(e.target.value)} className='border rounded-lg px-4 py-3 text-base font-bold w-full md:w-auto' style={{ color: 'black', background: 'white', minWidth: '100px', minHeight: '44px' }}>
 					<option value=''>Sort</option>
 					<option value='price-asc'>Price: Low → High</option>
 					<option value='price-desc'>Price: High → Low</option>
 				</select>
-				   <button onClick={apply} style={{ backgroundColor: '#ff6f00', color: 'white', minWidth: '140px', minHeight: '56px' }} className='px-6 py-5 rounded-lg text-lg font-bold'>Apply</button>
+				 <button onClick={apply} style={{ backgroundColor: '#FFD600', color: 'black', minWidth: '100px', minHeight: '44px', width: '100%' }} className='px-4 py-3 rounded-lg text-base font-bold'>Apply</button>
 			</div>
 		</div>
 

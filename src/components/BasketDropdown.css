@@ -1,0 +1,13 @@
+.basket-dropdown-responsive {
+  /* Default: right aligned */
+}
+@media (max-width: 600px) {
+  .basket-dropdown-responsive {
+    left: 0 !important;
+    right: auto !important;
+    min-width: 90vw !important;
+    max-width: 98vw !important;
+    top: 56px !important;
+    transform: none !important;
+  }
+}

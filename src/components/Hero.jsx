@@ -8,7 +8,8 @@ return (
 <section className='bg-white hero-overlay'>
 <div className='container mx-auto px-4 py-16 grid md:grid-cols-2 gap-8 items-center'>
 <div>
-<h1 className='text-4xl md:text-5xl font-extrabold leading-tight' style={{color: '#ff6f00'}}>Taste the difference — fresh, seasonal & unforgettable.</h1>
+<h1 className='text-4xl md:text-5xl font-extrabold leading-tight font-[cursive]' style={{color: '#FFD600', fontFamily: 'cursive, Poppins, sans-serif'}}>Taste the difference — fresh, seasonal & unforgettable.</h1>
+
 <p className='mt-4 bg-white text-slate-600 max-w-xl'>At RestroHub we craft every dish with care. Join us for a memorable meal, whether it’s a quick lunch or a celebratory dinner.</p>
 <div className='mt-6 flex gap-3 mb-8'>
 	<Link to='/menu'>
@@ -17,12 +18,12 @@ return (
 					View Menu
 				</button>
 	</Link>
-	<a href="#reservation">
+	<Link to="/reserve">
 				<button type="button" className="bg-white text-black rounded-xl font-extrabold shadow-xl border-2 border-slate-400 hover:bg-slate-100 transition cursor-pointer"
 					style={{ minWidth: '180px', minHeight: '60px', fontSize: '1.5rem', padding: '1rem 2rem' }}>
 					Reserve a Table
 				</button>
-	</a>
+	</Link>
 </div>
 
 

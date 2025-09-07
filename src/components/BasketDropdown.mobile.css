@@ -1,0 +1,20 @@
+.basket-dropdown-item-responsive {
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (max-width: 600px) {
+  .basket-dropdown-item-responsive {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+  }
+  .basket-dropdown-delete-btn {
+    width: 60% !important;
+    min-width: 80px !important;
+    max-width: 180px !important;
+    margin-left: 0 !important;
+    margin-top: 6px !important;
+    align-self: flex-start !important;
+  }
+}

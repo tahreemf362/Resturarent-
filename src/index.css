@@ -1,19 +1,91 @@
-/* Forcefully decrease height of featured cards from bottom on home page */
-.force-feature-card {
-	max-height: 410px !important;
-	min-height: 350px;
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
-	padding-bottom: 0 !important;
-	margin-bottom: 0 !important;
-	overflow: hidden;
+@media (max-width: 767px) {
+	.menu-page .force-dishcard-mobile,
+	.menu-page .force-dishcard-mobile *,
+	.menu-page .force-dishcard-mobile *:not([style*="color"]),
+	.menu-page .force-dishcard-mobile *:not([class*="text-"]) {
+		color: #FFD600 !important;
+	}
 }
+@media (min-width: 768px) {
+	.menu-page .force-dishcard-mobile, .menu-page .force-dishcard-mobile * {
+		color: #000 !important;
+	}
+}
+.menu-page .force-dishcard-mobile {
+	background: #fff !important;
+}
+@media (max-width: 1023px) {
+	.force-dishcard-mobile, .force-dishcard-mobile * {
+		color: #000 !important;
+	}
+}
+/* Force black background for info cards on homepage */
+.force-black-bg {
+	background: #000 !important;
+}
+@media (max-width: 767px) {
+	.force-feature-row-mobile {
+		display: flex !important;
+		flex-direction: column !important;
+		gap: 0 !important;
+		align-items: stretch !important;
+		margin: 0 !important;
+		padding: 0 !important;
+		background: none !important;
+	}
+	.force-feature-card {
+		margin: 0 !important;
+		padding: 0 !important;
+		border: none !important;
+		box-shadow: none !important;
+		border-radius: 0 !important;
+		background: hsl(0, 0%, 100%) !important;
+		width: 100% !important;
+		display: flex !important;
+		flex-direction: column !important;
+		justify-content: flex-start !important;
+		height: auto !important;
+		min-height: 420px !important;
+		max-height: none !important;
+	}
+	.force-feature-card > * {
+		margin: 0 !important;
+		padding: 0 !important;
+	}
+	.feature-recipe-mobile {
+		margin: 0 !important;
+		padding: 0 !important;
+		border-radius: 0 !important;
+		background: none !important;
+	}
+	.force-feature-row-mobile > * {
+		margin: 0 !important;
+		padding: 0 !important;
+	}
+	.force-feature-row-mobile > .force-feature-card:last-child {
+		margin-top: -32px !important;
+	}
+}
+
+/* Featured dish cards - desktop */
+.force-feature-card {
+	width: 340px !important;
+	min-height: 350px;
+	max-height: 420px !important;
+	display: flex !important;
+	flex-direction: column !important;
+	align-items: center !important;
+	justify-content: flex-start !important;
+	margin-left: auto !important;
+	margin-right: auto !important;
+	overflow: hidden !important;
+}
+
 /* Forceful menu card image container and image sizing */
 .force-menu-img-container {
-	height: 180px !important;
-	min-height: 160px;
-	max-height: 200px;
+	height: 120px !important;
+	min-height: 100px !important;
+	max-height: 160px !important;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -28,6 +100,7 @@
 	margin-left: auto;
 	margin-right: auto;
 }
+
 /* Forceful menu grid: 3 cards per row, 2 rows, strong spacing */
 .force-menu-grid {
 	display: flex;
@@ -50,6 +123,7 @@
 		align-items: center;
 	}
 }
+
 /* Forceful menu card image sizing */
 .force-menu-img {
 	max-height: 96px !important;
@@ -60,6 +134,7 @@
 	margin-left: auto;
 	margin-right: auto;
 }
+
 /* Forceful chef image sizing for About cards */
 .force-about-chef-img {
 	width: 72px !important;
@@ -73,6 +148,7 @@
 	margin-left: auto;
 	margin-right: auto;
 }
+
 /* Forceful About chef grid and card sizing for desktop */
 .force-about-chef-grid {
 	justify-items: center;
@@ -93,19 +169,20 @@
 	margin-right: auto;
 }
 @media (min-width: 768px) {
-		.force-about-chef-grid {
-			grid-template-columns: repeat(3, 1fr) !important;
-			max-width: 900px !important;
-			padding-left: 0.5rem;
-			padding-right: 0.5rem;
-		}
-		.force-about-chef-card {
-			min-width: 220px;
-			max-width: 270px;
-			min-height: 280px;
-			max-height: 340px;
-		}
+	.force-about-chef-grid {
+		grid-template-columns: repeat(3, 1fr) !important;
+		max-width: 900px !important;
+		padding-left: 0.5rem;
+		padding-right: 0.5rem;
+	}
+	.force-about-chef-card {
+		min-width: 220px;
+		max-width: 270px;
+		min-height: 280px;
+		max-height: 340px;
+	}
 }
+
 /* Forceful height and text size for contact form card */
 .force-contact-form-tall {
 	min-height: 340px !important;
@@ -127,6 +204,7 @@
 	padding-top: 1rem !important;
 	padding-bottom: 1rem !important;
 }
+
 /* Forceful height and text size for contact info cards */
 .force-contact-info-tall {
 	min-height: 220px !important;
@@ -140,6 +218,7 @@
 .force-contact-info-tall p {
 	font-size: 1.25rem !important;
 }
+
 /* Forceful large contact card width */
 .force-contact-card-wide {
 	max-width: 640px !important;
@@ -160,51 +239,13 @@
 		margin-right: auto !important;
 	}
 }
+
 /* Forceful gap and padding for menu controls */
 .force-menu-controls {
 	gap: 2rem !important;
 	padding: 1rem 0 !important;
 }
-/* Force all featured dish cards to have same width and height on desktop */
-.force-feature-card {
-	width: 340px !important;
-	height: 600px !important;
-	display: flex !important;
-	flex-direction: column !important;
-	align-items: center !important;
-	justify-content: center !important;
-	margin-left: auto !important;
-	margin-right: auto !important;
-}
-@media (max-width: 767px) {
-	.force-feature-card {
-		width: 100% !important;
-		max-width: 100% !important;
-		height: 900px !important;
-		min-height: 900px !important;
-	}
-}
-@media (max-width: 767px) {
-	.force-feature-card {
-		width: 100% !important;
-		max-width: 100% !important;
-		height: 540px !important;
-	}
-}
-@media (max-width: 767px) {
-	.force-feature-card {
-		width: 100% !important;
-		max-width: 100% !important;
-		height: 460px !important;
-	}
-}
-@media (max-width: 767px) {
-	.force-feature-card {
-		width: 100% !important;
-		max-width: 100% !important;
-		height: 384px !important;
-	}
-}
+
 /* Collapsible sidebar for mobile nav */
 .mobile-sidebar {
 	position: fixed;
@@ -213,7 +254,7 @@
 	height: 100vh;
 	width: 70vw;
 	max-width: 320px;
-	background: #ff6f00;
+	background: #FFD600;
 	color: #fff;
 	z-index: 1000;
 	box-shadow: 2px 0 16px rgba(0,0,0,0.15);
@@ -256,6 +297,7 @@
 	background: rgba(0,0,0,0.3);
 	z-index: 999;
 }
+
 /* Forceful responsive navbar display */
 .force-mobile-nav { display: block !important; }
 .force-desktop-nav { display: none !important; }
@@ -263,6 +305,7 @@
 	.force-mobile-nav { display: none !important; }
 	.force-desktop-nav { display: flex !important; }
 }
+
 /* Forceful gap between Add and Details buttons */
 .dish-btn-row {
 	display: flex !important;
@@ -271,9 +314,10 @@
 	width: 100% !important;
 	margin-top: 1rem !important;
 }
-/* Forcefully large orange buttons for Add and Details */
-.dish-btn-orange {
-	background-color: #ff6f00 !important;
+
+/* Yellow button style */
+.dish-btn-yellow {
+	background-color: #FFD600 !important;
 	color: #fff !important;
 	border: none !important;
 	padding: 1rem 2rem !important;
@@ -281,26 +325,18 @@
 	font-weight: bold !important;
 	border-radius: 0.75rem !important;
 }
-/* Force orange buttons for Add and Details everywhere */
-.dish-btn-orange {
-	background-color: #ff6f00 !important;
-	color: #fff !important;
-	border: none !important;
-}
 
+/* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
-
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
-
-
-
-
-:root{--brand-primary:#ff6fa9;--brand-compl:#ffeaf5}
+:root {
+	--brand-primary:#ff6fa9;
+	--brand-compl:#ffeaf5;
+}
 
 body {
 	background-color: #000;
@@ -308,19 +344,20 @@ body {
 	font-family: 'Poppins', sans-serif;
 }
 
-
 /* small custom utilities */
-.card-shadow{
+.card-shadow {
 	box-shadow:0 10px 30px rgba(16,24,40,0.08);
-	background: #fff !important;
-	color: #000 !important;
 }
-.hero-overlay{background:linear-gradient(90deg, rgba(255,111,153,0.1), rgba(255,111,153,0.06))}
-
+.hero-overlay {
+	background:linear-gradient(90deg, rgba(255,111,153,0.1), rgba(255,111,153,0.06));
+}
 
 /* Card hover effect fallback for non-js users */
-.card-hover:hover{transform:translateY(-6px) scale(1.01)}
-
+.card-hover:hover {
+	transform:translateY(-6px) scale(1.01);
+}
 
 /* Smooth image fit */
-.img-fit{object-fit:cover}
+.img-fit {
+	object-fit:cover;
+}
